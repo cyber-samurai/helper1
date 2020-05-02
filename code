@@ -2,8 +2,8 @@ from tkinter import*
 import webbrowser
 
 root=Tk()
-root.title("Projeck")
-root.geometry("850x400")
+root.title("helper1")
+root.geometry("810x400")
 def vvod():
     aaaaa.insert(END,ent.get())
     ent.delete(0, END)
