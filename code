@@ -121,8 +121,8 @@ url = "https://zen.yandex.ru"
 def openweb():
     webbrowser.open(url,new=new)
 
-urlb = Button(root,text="МОТИВАЦИЯ",width=15,height=3,bg='purple',fg='yellow',font='ComicSans 14',command=openweb)
-urlb.grid(row=5,column=1)
+urlb = Button(root,text="МОТИВАЦИЯ",width=40,height=5,bg='red',fg='yellow',font='ComicSans 14',command=openweb)
+urlb.grid(row=5,column=0,columnspan=4)
 
 
 
