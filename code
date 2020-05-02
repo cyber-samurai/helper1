@@ -53,7 +53,7 @@ def sdelano():
 
 
        
-but=Button(root,text='Переместить в имеющиеся дела',width=40,height=1,bg='purple',fg='yellow',font='ComicSans 14',command=vvod)
+but=Button(root,text='Переместить в имеющиеся дела',width=30,height=1,bg='purple',fg='yellow',font='ComicSans 14',command=vvod)
 lab = Label(root, text="Чем заняться?", font='ComicSans 40')
 
 
@@ -73,6 +73,9 @@ Lf.grid(row=1,column=1)
 frame=Frame(root,width=10,height=5,bg='darkred',bd=15)
 ent = Entry(root,width=40)#Поле ввода
 
+knopki=Frame(root,width=30,height=2)
+knopochki=Frame(root,width=30,height=2)
+
 but1=Button(root,text="URL",width=10,height=5,bg='purple',fg='yellow',font='ComicSans 14')
 sdelal=Button(root,text="Сделано!",width=20,height=3,bg='purple',fg='yellow',font='ComicSans 14',command=nuzhnosdelat)
 neuspel=Button(root,text="Не сделано(",width=20,height=3,bg='purple',fg='yellow',font='ComicSans 14',command=sdelano)
@@ -83,45 +86,48 @@ check=Checkbutton(root,text="маленький check пункт внизу",var
 
 
 #____________________________________________________
-rbutton1=Button(root,text="сделать", command=do)
-rbutton2=Button(root,text="посетить", command=visit)
-rbutton3=Button(root,text="прочитать", command=read)
-rbutton4=Button(root,text="написать", command=write)
-rbutton5=Button(root,text="встретиться ", command=meet)
-rbutton6=Button(root,text="отправить ", command=send)
-rbutton7=Button(root,text="посмотреть ", command=watch)
-rbutton8=Button(root,text="купить ", command=buy)
+rbutton1=Button(knopki,text="сделать", command=do)
+rbutton2=Button(knopki,text="посетить", command=visit)
+rbutton3=Button(knopki,text="прочитать", command=read)
+rbutton4=Button(knopochki,text="написать", command=write)
+rbutton5=Button(knopochki,text="встретиться ", command=meet)
+rbutton6=Button(knopochki,text="отправить ", command=send)
+rbutton7=Button(knopochki,text="посмотреть ", command=watch)
+rbutton8=Button(knopki,text="купить ", command=buy)
 #____________________________________________________
 for i in list1:
     aaaaa.insert(END,i)
 
 lab.grid(row=0,column=0,columnspan=5)
 aaaaa.grid(row=1,column=4,rowspan=3)
-sdelal.grid(row=4,column=4,rowspan=3)
+sdelal.grid(row=4,column=4,rowspan=2)
 bbbbb.grid(row=1,column=5,rowspan=3)
-neuspel.grid(row=4,column=5,rowspan=3)
+neuspel.grid(row=4,column=5,rowspan=2)
 ent.grid(row=1,column=0,columnspan=4)
 but.grid(row=4,column=0,columnspan=4)
 #text1.grid(row=2,column=4)
 frame.grid(row=3,column=3)
 
 #check.grid(row=3,column=1)
+knopki.grid(row=2,column=0,columnspan=4)
+rbutton1.pack(side='left')
+rbutton2.pack(side='left')
+rbutton3.pack(side='left')
+rbutton8.pack(side='left')
 
-rbutton1.grid(row=2,column=0)
-rbutton2.grid(row=2,column=1)
-rbutton3.grid(row=2,column=2)
-rbutton4.grid(row=3,column=0)
-rbutton5.grid(row=3,column=1)
-rbutton6.grid(row=3,column=2)
-rbutton7.grid(row=3,column=3)
-rbutton8.grid(row=2,column=3)
+knopochki.grid(row=3,column=0,columnspan=4)
+rbutton4.pack(side='left')
+rbutton5.pack(side='left')
+rbutton6.pack(side='left')
+rbutton7.pack(side='left')
+
 new = 1
 url = "https://zen.yandex.ru"
 
 def openweb():
     webbrowser.open(url,new=new)
 
-urlb = Button(root,text="МОТИВАЦИЯ",width=15,height=3,bg='purple',fg='yellow',font='ComicSans 14',command=openweb)
+urlb = Button(root,text="МОТИВАЦИЯ",width=20,height=1,bg='black',fg='yellow',font='ComicSans 14',command=openweb)
 urlb.grid(row=5,column=1)
 
 
